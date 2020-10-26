@@ -1,4 +1,4 @@
-package com.facebook.currency_service;
+package com.facebook.currency_service.controller;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

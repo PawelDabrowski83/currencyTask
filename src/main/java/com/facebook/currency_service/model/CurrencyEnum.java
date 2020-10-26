@@ -1,4 +1,4 @@
-package com.facebook.currency_service;
+package com.facebook.currency_service.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
