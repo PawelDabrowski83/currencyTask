@@ -7,4 +7,4 @@ For <strong>{code}</strong> PLN, USD, EUR returning fixed values. For any other 
 
 Stack:
 * SpringBoot
-* Gson
+* Junit with parameterized tests
