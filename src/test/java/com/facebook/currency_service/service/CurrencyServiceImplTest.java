@@ -1,5 +1,8 @@
-package com.facebook.currency_service;
+package com.facebook.currency_service.service;
 
+import com.facebook.currency_service.model.CurrencyEnum;
+import com.facebook.currency_service.service.CurrencyService;
+import com.facebook.currency_service.service.CurrencyServiceImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

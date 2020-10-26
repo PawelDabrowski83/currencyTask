@@ -1,5 +1,7 @@
-package com.facebook.currency_service;
+package com.facebook.currency_service.controller;
 
+import com.facebook.currency_service.model.CurrencyEnum;
+import com.facebook.currency_service.service.CurrencyServiceImpl;
 import com.google.gson.Gson;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
