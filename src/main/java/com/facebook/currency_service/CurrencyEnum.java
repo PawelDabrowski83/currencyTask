@@ -1,5 +1,7 @@
 package com.facebook.currency_service;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public enum CurrencyEnum {
 
         PLN("PLN", 3.55f),
@@ -8,18 +10,20 @@ public enum CurrencyEnum {
         NULL("", 0f);
 
     private final String name;
-    private final float value;
 
-    private CurrencyEnum(String name, float value) {
+    @JsonProperty("currencyValue")
+    private final float currencyValue;
+
+    private CurrencyEnum(String name, float currencyValue) {
         this.name = name;
-        this.value = value;
+        this.currencyValue = currencyValue;
     }
 
     public String getName() {
         return name;
     }
 
-    public float getValue() {
-        return value;
+    public float getCurrencyValue() {
+        return currencyValue;
     }
 }

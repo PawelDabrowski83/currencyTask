@@ -20,7 +20,7 @@ public class CurrencyController {
 
     @GetMapping("/{currencyCode}")
     @ResponseBody
-    public float getCurrency(@PathVariable String currencyCode, HttpServletResponse response) throws IOException {
-        return currencyServiceImpl.getCurrencyByCode(currencyCode).getValue();
+    public CurrencyEnum getCurrency(@PathVariable String currencyCode, HttpServletResponse response) throws IOException {
+        return currencyServiceImpl.getCurrencyValueByCode(currencyCode);
     }
 }

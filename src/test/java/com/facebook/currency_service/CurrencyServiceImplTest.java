@@ -25,8 +25,8 @@ public class CurrencyServiceImplTest {
     @ParameterizedTest
     @MethodSource("currencyValuesProvider")
     void shouldReturnValuesGivenCodes(String currencyCode, float expectedValue){
-        CurrencyEnum currencyEnumActual = currencyService.getCurrencyByCode(currencyCode);
-        assertEquals(expectedValue, currencyEnumActual.getValue(), 0.01);
+        CurrencyEnum actualCurrency = currencyService.getCurrencyValueByCode(currencyCode);
+        assertEquals(expectedValue, actualCurrency.getCurrencyValue());
     }
 
 }
