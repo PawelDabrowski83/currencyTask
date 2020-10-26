@@ -7,6 +7,8 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class CurrencyServiceImplTest {
 
     final CurrencyService currencyService = new CurrencyServiceImpl();
@@ -19,9 +21,12 @@ public class CurrencyServiceImplTest {
         );
     }
 
-//    @DisplayName("should service return currency values")
-//    @ParameterizedTest
-//    @MethodSource("currencyValuesProvider")
-//    void
+    @DisplayName("should service return currency values")
+    @ParameterizedTest
+    @MethodSource("currencyValuesProvider")
+    void shouldReturnValuesGivenCodes(String currencyCode, float expectedValue){
+        CurrencyEnum currencyEnumActual = currencyService.getCurrencyByCode(currencyCode);
+        assertEquals(expectedValue, currencyEnumActual.getValue(), 0.01);
+    }
 
 }
